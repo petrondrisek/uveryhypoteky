@@ -157,7 +157,9 @@ function uveryhypoteky_scripts() {
 	wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/theme.css' );
 	wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/js/theme.js', array('jquery'), time() );
 
-	wp_enqueue_script( 'mapy-script', 'https://api.mapy.cz/loader.js' );
+	wp_enqueue_style( 'mapy-style', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css' );
+	wp_enqueue_script( 'mapy-script', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js' );
+	wp_enqueue_script( 'mapy-init-script', get_template_directory_uri() . '/js/map.js', array('jquery', 'mapy-script'), time(), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
