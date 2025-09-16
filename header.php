@@ -18,7 +18,6 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-	<script>Loader.load(null, {pano: true})</script>
 </head>
 
 <body <?php body_class(); ?>>
